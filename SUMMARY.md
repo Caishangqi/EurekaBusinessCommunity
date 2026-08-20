@@ -6,6 +6,7 @@
 
 * [核心玩法与开店指南](players/Gameplay-Guide.md)
 * [商品陈列、标价与店铺收益](players/Shop-Management.md)
+* [店铺装饰品与加成指南](players/Decoration-Guide.md)
 * [48 种要素属性与商品 Lore](players/Elements-System.md)
 * [顾客行为、变体与连购机制](players/Customer-Behaviors.md)
 

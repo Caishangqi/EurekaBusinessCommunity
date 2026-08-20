@@ -2,45 +2,56 @@
 
 本文档面向整合包作者，说明如何使用商品目录控制零售内容与经济节奏。
 
-## 默认目录
+---
 
-当前代码种子包含以下示例商品：
+## 1. 默认商品价值与要素配置表 (Default Catalog & Elements)
 
-| 物品 | 默认元素 |
-| --- | --- |
-| `minecraft:andesite` | `element_terra:1` |
-| `minecraft:netherrack` | `element_ignis:1`, `element_mortuus:1` |
-| `minecraft:iron_pickaxe` | `element_instrumentum:2`, `element_metallum:2` |
-| `minecraft:iron_axe` | `element_instrumentum:2`, `element_metallum:2` |
-| `minecraft:nether_wart` | `element_venenum:1`, `element_praecantatio:1` |
-| `minecraft:blaze_powder` | `element_ignis:2`, `element_praecantatio:1` |
-| `minecraft:book` | `element_cognitio:1`, `element_praecantatio:1` |
+Retail 自带一组经过平衡的默认商品配置种子（基于 Fzzy Config）：
 
-完整键使用 `eurekabusinesscore:element_<latin>` 格式。默认目录是配置的初始种子，不是每次启动都会覆盖作者配置的动态列表。
+| 物品 ID (Item ID) | 默认要素与等级 (Elements & Level) | 廉价区间 (Cheap) [印记] | 完美区间 (Perfect) [印记] | 昂贵区间 (Expensive) [印记] | 天价区间 (Overpriced) [离店] |
+| :--- | :--- | :---: | :---: | :---: | :---: |
+| `minecraft:andesite` | `terra:1` (大地) | `1 ~ 10` [8] | `11 ~ 40` [25] | `41 ~ 80` [60] | `81 ~ 120` [100] |
+| `minecraft:netherrack` | `ignis:1` (火焰), `mortuus:1` (死亡) | `1 ~ 10` [8] | `11 ~ 40` [25] | `41 ~ 80` [60] | `81 ~ 120` [100] |
+| `minecraft:iron_pickaxe`| `instrumentum:2` (器具), `metallum:2` (金属) | `10 ~ 20` [15] | `21 ~ 60` [40] | `61 ~ 120` [90] | `121 ~ 180` [150] |
+| `minecraft:iron_axe` | `instrumentum:2` (器具), `metallum:2` (金属) | `8 ~ 18` [13] | `19 ~ 50` [34] | `51 ~ 100` [75] | `101 ~ 160` [130] |
+| `minecraft:nether_wart` | `venenum:1` (毒素), `praecantatio:1` (魔法) | `5 ~ 12` [8] | `13 ~ 45` [29] | `46 ~ 90` [68] | `91 ~ 140` [115] |
+| `minecraft:blaze_powder`| `ignis:2` (火焰), `praecantatio:1` (魔法) | `12 ~ 25` [18] | `26 ~ 70` [48] | `71 ~ 130` [100] | `131 ~ 200` [165] |
+| `minecraft:book` | `cognitio:1` (心智), `praecantatio:1` (魔法) | `4 ~ 12` [8] | `13 ~ 40` [26] | `41 ~ 80` [60] | `81 ~ 130` [105] |
 
-## 四档价格
+> **提示**：完整要素键使用 `eurekabusinesscore:element_<latin>` 格式。默认目录是配置的初始种子，不是每次启动都会覆盖作者配置的动态列表。
+
+---
+
+## 2. 价值容器升级阶梯 (Value Container Progression)
+
+收银台所使用的价值存储容器 (`value_container`) 拥有五阶升级容量：
+
+| 阶级 (Tier) | 容量上限 (Capacity) | 升级配方规则 | 放置态光源等级 (Light) |
+| :---: | :---: | :--- | :---: |
+| **Tier 0** | `1,024` 价值 | 默认合成 | 0 ~ 1 |
+| **Tier 1** | `4,096` 价值 | 存满 1,024 后自身放入工作台升级 | 1 ~ 2 |
+| **Tier 2** | `16,384` 价值 | 存满 4,096 后自身放入工作台升级 | 2 ~ 4 |
+| **Tier 3** | `65,536` 价值 | 存满 16,384 后自身放入工作台升级 | 4 ~ 5 |
+| **Tier 4** | `262,144` 价值 | 存满 65,536 后自身放入工作台升级 | 5 ~ 7 |
+| **Tier 5** | `1,048,576` 价值 (1.04M) | 存满 262,144 后自身放入工作台升级 | 8 (最高) |
+
+---
+
+## 3. 四档价格机制
 
 每个目录项有四档价格区间：
 
-- `cheap`：低于常规预期的价格。
-- `perfect`：理想价格区间。
+- `cheap`：低于常规预期的价格。顾客秒买并提高连购概率。
+- `perfect`：理想价格区间。标准成交点。
 - `expensive`：偏高但仍可能成交的价格。
-- `overpriced`：高价区间。
+- `overpriced`：过高价格，顾客将直接拒绝购买并进入离店流程。
 
 每个区间可以设置 `start`、`end` 和可选 `stamp`。`stamp` 为负数时使用闭区间中点作为展示价格。价格必须为非负整数，数量和价格的最终合法性由服务端目录快照再次校验。
 
-## 同款商品的竞争
+---
+
+## 4. 同款商品的竞争与定价
 
 同一个完整物品数据在多个陈列基座出现时，顾客会按公开标价优先选择最低价基座。价格相同时保留供给顺序或原有随机回退行为。整合包作者可以利用这一规则制作促销区，但应同时考虑低价基座的库存与补货能力。
 
 物品比较不能只依赖显示名称。不同数据组件、附魔或自定义数据可能代表不同商品，应使用完整物品数据进行测试。
-
-## 元素与平衡
-
-元素等级是商品属性，不是货币单位。它可以用于：
-
-- 为附属模组的顾客变体提供出现概率条件。
-- 为连购算法提供购买后的概率增量。
-- 为整合包作者建立主题商品分类和经济梯度。
-
-不要把元素等级直接当作通用价格公式，除非整合包自己的设计明确这样规定。EurekaBusiness 当前只提供元素数据、目录价格区间和顾客扩展契约，不替整合包决定货币模型。
