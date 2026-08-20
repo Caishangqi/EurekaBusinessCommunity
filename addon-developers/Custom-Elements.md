@@ -34,7 +34,7 @@ ElementRegistrar registrar = /* obtain during the Core bootstrap window */ null;
 
 ## 资源与翻译
 
-图标是客户端资源，但元素定义本身属于 Core 公共数据。资源应由附属模组随自己的资源包提供，并在 `en_us.json`、`zh_cn.json` 等语言文件中声明翻译键。
+图标是客户端资源，但元素定义本身属于 Core 公共数据。资源应由附属模组随自己的资源包提供，并在 `en_us.json`,`zh_cn.json` 等语言文件中声明翻译键。
 
 ## 商品中的等级
 
@@ -45,4 +45,4 @@ ElementRegistrar registrar = /* obtain during the Core bootstrap window */ null;
 - ID 必须全局唯一。
 - 注册窗口冻结后不要继续注册。
 - 不要使用显示名称代替限定 ID。
-- 不要把价格、库存或顾客权限写入元素定义。
+- 不要把价格,库存或顾客权限写入元素定义。

@@ -1,6 +1,6 @@
 # Core 模块与公共 API (Core Module)
 
-Core 是 EurekaBusiness 的平台基础模块。它面向 Retail、Restaurant 和附属模组提供内容中立的公共契约。
+Core 是 EurekaBusiness 的平台基础模块。它面向 Retail,Restaurant 和附属模组提供内容中立的公共契约。
 
 ## 主要公共 API
 
@@ -18,7 +18,7 @@ Core 是 EurekaBusiness 的平台基础模块。它面向 Retail、Restaurant �
 
 ## 元素定义
 
-元素由 ID、翻译键、图标资源和可选 `0xRRGGBB` 色调组成。元素定义不包含价格，也不决定具体商品；商品所属模块负责给目录项分配元素及 `1..9` 等级。
+元素由 ID,翻译键,图标资源和可选 `0xRRGGBB` 色调组成。元素定义不包含价格，也不决定具体商品；商品所属模块负责给目录项分配元素及 `1..9` 等级。
 
 ## 冻结视图
 
@@ -26,4 +26,4 @@ Core 是 EurekaBusiness 的平台基础模块。它面向 Retail、Restaurant �
 
 ## 依赖要求
 
-附属模组应依赖公开 API，不要引用 `internal` 包、平台私有 Registry 实现或客户端实现类。若能力尚未出现在公开契约中，应先提出 Core API 设计，而不是通过反射访问内部状态。
+附属模组应依赖公开 API，不要引用 `internal` 包,平台私有 Registry 实现或客户端实现类。若能力尚未出现在公开契约中，应先提出 Core API 设计，而不是通过反射访问内部状态。

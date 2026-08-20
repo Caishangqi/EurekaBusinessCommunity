@@ -10,11 +10,11 @@ Retail 使用 Fzzy Config 注册独立配置 `eurekabusinessretail:value_catalog
 
 | 字段 | 作用 |
 | --- | --- |
-| `catalogEntries` | 可售物品目录，每项包含物品 ID、元素列表和四档价格区间 |
+| `catalogEntries` | 可售物品目录，每项包含物品 ID,元素列表和四档价格区间 |
 | `purchaseQuantityMin` | 单笔购买数量下限 |
 | `purchaseQuantityMax` | 单笔购买数量上限 |
 
-每个目录项包含 `itemId`、`elements`、`cheap`、`perfect`、`expensive` 和 `overpriced`。价格区间是闭区间；未填写固定价格时，系统使用区间中点作为展示价格。
+每个目录项包含 `itemId`,`elements`,`cheap`,`perfect`,`expensive` 和 `overpriced`。价格区间是闭区间；未填写固定价格时，系统使用区间中点作为展示价格。
 
 ## 元素配置
 
@@ -49,4 +49,4 @@ level = 1
 4. 启动专用服务器并检查配置更新日志。
 5. 再将经过验证的配置复制到整合包发布实例。
 
-配置只负责目录和价格。交易库存、权限、结算和持久化状态仍由服务端运行时校验。
+配置只负责目录和价格。交易库存,权限,结算和持久化状态仍由服务端运行时校验。
