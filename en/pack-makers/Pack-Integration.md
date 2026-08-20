@@ -31,7 +31,7 @@ This task is intended solely for developer testing and should not be invoked as 
 
 ## Architecture Boundaries
 
-- Do not use `Documentation/` or wiki files as runtime configuration files;
-- Never treat `.reference/` content as a shipping resource or runtime dependency;
+- Do not treat static documentation text as a runtime configuration file;
+- Never treat local development assets as a shipping resource or runtime dependency;
 - Client-provided prices, quantities, and element lists are untrusted;
 - Avoid scanning all shop pedestals or entities per tick. Rely on configuration updates, inventory changes, or server events.
