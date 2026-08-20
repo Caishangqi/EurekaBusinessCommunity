@@ -1,0 +1,24 @@
+$schema: https://api.gitbook.com/openapi.yaml#/components/schemas/GitSyncSiteConfig
+site:
+  title: EurekaBusiness Documentation
+  structure:
+    - type: section
+      key: documentation
+      title: Documentation
+      path: ""
+      children:
+        - type: space
+          key: docs-zh
+          title: 简体中文
+          path: ""
+          default: true
+          content:
+            directory: ./zh
+            language: zh
+        - type: space
+          key: docs-en
+          title: English
+          path: en
+          content:
+            directory: ./en
+            language: en
