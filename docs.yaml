@@ -13,12 +13,12 @@ site:
           path: ""
           default: true
           content:
-            directory: ./zh
+            directory: ./docs/zh
             language: zh
         - type: space
           key: docs-en
           title: English
           path: en
           content:
-            directory: ./en
+            directory: ./docs/en
             language: en

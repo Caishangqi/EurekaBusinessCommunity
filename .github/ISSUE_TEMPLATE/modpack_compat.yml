@@ -1,0 +1,32 @@
+name: "Modpack Compatibility Issue"
+description: "Report a conflict or compatibility issue with another Minecraft mod or modpack"
+title: "[Compat]: "
+labels: ["compatibility"]
+body:
+  - type: input
+    id: mod_version
+    attributes:
+      label: "EurekaBusiness Version"
+      placeholder: "e.g. 1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: conflicting_mod
+    attributes:
+      label: "Target Mod Name & Version"
+      description: "Name and version of the mod with compatibility issues"
+      placeholder: "e.g. Create 0.5.1j / Farmer's Delight 1.2.4"
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: "Issue Description"
+      description: "Describe how the two mods conflict or what behavior fails."
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logs / Crash Dumps"
+      render: text
