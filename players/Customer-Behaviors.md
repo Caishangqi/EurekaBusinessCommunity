@@ -17,14 +17,15 @@
 
 ## 2. 顾客变体图鉴 (Customer Variants Reference)
 
-顾客拥有不同的 **变体 (Variant)**、**职业偏好** 与 **着色外观 (Tint)**：
+顾客拥有不同的 **变体 (Variant)**、**职业偏好**、**模型与肖像**：
 
 | 变体 ID (Variant) | 本地化名称 | 外观 / 模型与肖像 | 偏好要素 (Preferences) | 出现条件 / 稀有度算法 | 购买行为与连购特性 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | `customer.default` | **普通冒险家** (Default) | 经典背包造型<br>肖像: `Gabriel` | 通用常规物品 | 基础稀有度 `100%`<br>(兜底默认出现) | 基础购买 (1~4件, 50%意向, 30%阈值) |
-| `customer.mage` | **神秘法师** (Mage) | 尖顶兜帽长袍<br>肖像: `Juan` | 魔法与奥术物品 | 固定稀有度 `25%` | 偏好购买 (2~3件, 70%意向, 40%阈值) |
-| `customer.alchemist` | **炼金学者** (Alchemist) | 药水长袍双外观<br>肖像: `Gabriel`/`Juan` | 魔法 `praecantatio`<br>能量 `potentia` | **店铺魔法要素加成**<br>店内魔法要素越高出现概率越大 | **魔法狂热连购**<br>买到心仪魔法药水后极高概率继续选购 |
-| `customer.explorer` | **荒野探险家** (Explorer) | 探险行装双外观<br>肖像: `Gabriel`/`Juan` | 采掘 `perfodio`<br>旅行 `iter`<br>金属 `metallum` | **店铺探险要素加成**<br>店内矿物与探险物品加成 | **装备连购**<br>买到镐斧/矿物后提升连购意愿 |
+| `customer.mage` | **神秘法师** (Mage) | 尖顶兜帽长袍两款模型<br>肖像: `Juan`, `Valdon`, `Violetta` | 魔法 `praecantatio`<br>灵气 `auram`<br>心智 `cognitio` | **店铺魔法画像加成**<br>$\sum \text{Magic} > 4$ 时大幅提升出现率 | **魔法狂热连购**<br>买到魔法物品 $+20\% + (\text{Lv} \times 3\%)$ |
+| `customer.alchemist` | **炼金学者** (Alchemist) | 药剂长袍装束<br>肖像: `Isaac`, `Jasper`, `Maxine` | 魔法 `praecantatio`<br>能量 `potentia`<br>剧毒 `venenum`<br>腐化 `vitium` | **药剂与毒素材料加成**<br>店内药水材料越丰富出现概率越高 | **药剂狂热连购**<br>买到药水毒素材料 $+10\%$，店内贪婪物品加成 |
+| `customer.explorer` | **荒野探险家** (Explorer) | 探险旅行装束<br>肖像: `Amelia`, `Conrad`, `Dylan` | 采掘 `perfodio`<br>旅行 `iter`<br>金属 `metallum`<br>异域 `alienis` | **探险与旅行物资加成**<br>店内矿物/探险物品/地图加成 | **探险连购**<br>买到旅行道具 $+20\% + (\text{Lv} \times 2\%)$ |
+| `customer.miner` | **地下矿工** (Miner) | 矿帽/背篓三款模型<br>肖像: `Oscar`, `Sasha`, `Evelyn`, `Salvador` | 采掘 `perfodio`<br>金属 `metallum`<br>大地 `terra` | **原矿与金属矿物加成**<br>$\sum \text{Minerals} > 5$ 时高概率光顾 | **矿石狂热连购**<br>买到原矿/金属 $+25\% + (\text{Lv} \times 3\%)$ |
 | `customer.recolor_0` ~ `recolor_5` | **着色旅人 (6色)** | 6 色个性着色服饰<br>(金黄/天蓝/翠绿/绯红/紫罗兰/青绿) | 通用常规物品 | 固定稀有度 `12%` | 基础购买 (1~2件, 50%意向, 20%阈值) |
 
 ---
@@ -32,12 +33,12 @@
 ## 3. 店铺元素画像与稀有顾客吸引
 
 - **店铺元素画像 (Shop Element Profile)**：
-  - 服务端会在顾客刷新时，快照统计店内所有陈列商品中所包含的要素及其最高等级。
-  - 例如：若店内摆放了 `魔法 4 级` 的附魔书和 `能量 3 级` 的烈焰棒，店铺的画像即包含 `praecantatio=4` 与 `potentia=3`。
+  - 服务端会在顾客刷新时，快照统计店内所有陈列商品中所包含的要素、单品最高等级及全店总等级和（$\sum \text{Element}$）。
+  - 例如：若店内摆放了 `魔法 3 级` 的附魔书、`魔法 2 级` 的恶魂之泪与 `能量 2 级` 的烈焰棒，店铺画像即包含 `praecantatio_sum=5` 与 `potentia_sum=2`。
 - **动态稀有度采样**：
-  - 稀有变体（如炼金术士）的生成概率算法由店铺元素画像驱动：
-    - 店铺内魔法要素等级越高，炼金学者越容易被吸引入店；
-    - 店铺内采掘与旅行要素越丰富，探险家光顾的概率大幅提高。
+  - 稀有变体的生成概率算法由店铺元素画像驱动：
+    - 店铺内魔法要素等级与总和越高，法师与炼金学者越容易被吸引入店；
+    - 店铺内采掘与金属矿物越丰富，矿工与探险家光顾的概率大幅提高。
 
 ---
 
