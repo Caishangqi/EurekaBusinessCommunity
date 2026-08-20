@@ -8,21 +8,30 @@ EurekaBusiness 是一个面向 Minecraft 1.21.1 / NeoForge 的多人合作模拟
 
 ## 快速导航 (Quick Navigation)
 
-```
-                       ┌────────────────────────┐
-                       │  EurekaBusiness Wiki   │
-                       └───────────┬────────────┘
-         ┌─────────────────────────┼─────────────────────────┐
-         ▼                         ▼                         ▼
-   【玩家指南】               【整合包作者】             【附属模组开发】
-   • 核心玩法与开店流程        • 配置文件与目录映射       • Core / Retail API
-   • 陈列、定价与收益          • 要素经济与价格平衡       • 自定义要素与算法注册
-   • 48 种要素与 Lore          • 指令与数据包支持         • 顾客变体与 AI 扩展
+```mermaid
+flowchart TD
+    Wiki[EurekaBusiness 知识库] --> Player[玩家指南]
+    Wiki --> Pack[整合包作者手册]
+    Wiki --> Addon[模组附属开发]
+
+    Player --> P1[核心玩法与开店]
+    Player --> P2[陈列、定价与装饰加成]
+    Player --> P3[48 种要素与 Lore]
+    Player --> P4[顾客行为与连购]
+
+    Pack --> K1[配置文件与迁移]
+    Pack --> K2[要素经济与定价]
+    Pack --> K3[整合包调试集成]
+
+    Addon --> A1[Core / Retail 契约]
+    Addon --> A2[自定义要素注册]
+    Addon --> A3[顾客变体与 AI]
 ```
 
 ### 1. 玩家指南 (Player Guide)
 - [核心玩法与开店快速入门](players/Gameplay-Guide.md)
 - [商品陈列、标价与店铺收益](players/Shop-Management.md)
+- [店铺装饰品与加成指南](players/Decoration-Guide.md)
 - [48 种要素属性与商品 Lore 系统](players/Elements-System.md)
 - [顾客行为、变体与排队结算机制](players/Customer-Behaviors.md)
 
