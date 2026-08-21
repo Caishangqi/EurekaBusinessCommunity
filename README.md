@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/user-attachments/assets/c03cbcf8-100d-4549-a7c1-9da20ea9dfd8" alt="Logo" width="300"></p>
+<p align="center"><img src="https://github.com/user-attachments/assets/de486336-8404-4d1d-bc19-6469b06fa257" alt="Logo" width="900"></p>
 
 <h1 align="center">EurekaBusiness Community</h1>
 <h4 align="center">The official community hub, issue tracker, and documentation source for EurekaBusiness</h4>
