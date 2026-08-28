@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 220" width="540" height="220">
+  <defs>
+    <!-- Tooltip Background Gradient -->
+    <linearGradient id="tooltipBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#140a1c" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#100818" stop-opacity="0.96"/>
+    </linearGradient>
+    
+    <!-- Outer Border Gradient -->
+    <linearGradient id="tooltipBorder" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5000ff"/>
+      <stop offset="100%" stop-color="#28007f"/>
+    </linearGradient>
+
+    <!-- Card Background Gradient -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a163a" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#1c0d28" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <style>
+    .title { font-family: 'Minecraft', 'Segoe UI', sans-serif; font-weight: bold; font-size: 18px; fill: #ffffff; }
+    .price-band { font-family: 'Minecraft', 'Segoe UI', sans-serif; font-size: 13px; font-weight: bold; }
+    .price-val { font-family: 'Minecraft', 'Segoe UI', sans-serif; font-size: 13px; fill: #ffffff; }
+    .cheap { fill: #55ff55; }
+    .perfect { fill: #55ffff; }
+    .expensive { fill: #ffaa00; }
+    .overpriced { fill: #ff5555; }
+    .element-name { font-family: 'Minecraft', 'Segoe UI', sans-serif; font-size: 12px; fill: #e0e0e0; font-weight: bold; }
+    .element-level { font-family: 'Minecraft', 'Segoe UI', sans-serif; font-size: 12px; fill: #ffd700; font-weight: bold; }
+    .badge-bg { fill: #120818; stroke: #ffaa00; stroke-width: 1.5; }
+  </style>
+
+  <!-- Minecraft Tooltip Container -->
+  <!-- Outer glow/border -->
+  <rect x="6" y="6" width="528" height="208" rx="6" fill="none" stroke="url(#tooltipBorder)" stroke-width="3" filter="url(#dropShadow)"/>
+  <rect x="9" y="9" width="522" height="202" rx="4" fill="none" stroke="#2c0c59" stroke-width="2"/>
+  <!-- Inner Background -->
+  <rect x="11" y="11" width="518" height="198" rx="3" fill="url(#tooltipBg)"/>
+
+  <!-- Item Title Header -->
+  <text x="24" y="38" class="title">铁镐 (Iron Pickaxe)</text>
+  <line x1="24" y1="48" x2="516" y2="48" stroke="#3d1b54" stroke-width="2"/>
+
+  <!-- Row 1: Four Price Reaction Bands -->
+  <g transform="translate(24, 60)">
+    <!-- Cheap / 超值 -->
+    <rect x="0" y="0" width="116" height="36" rx="4" fill="url(#cardBg)" stroke="#3d1b54" stroke-width="1"/>
+    <text x="58" y="17" text-anchor="middle" class="price-band cheap">超值 15</text>
+    <text x="58" y="30" text-anchor="middle" class="price-band cheap" font-size="10">10 ~ 20</text>
+
+    <!-- Perfect / 完美 -->
+    <rect x="124" y="0" width="116" height="36" rx="4" fill="url(#cardBg)" stroke="#3d1b54" stroke-width="1"/>
+    <text x="182" y="17" text-anchor="middle" class="price-band perfect">完美 40</text>
+    <text x="182" y="30" text-anchor="middle" class="price-band perfect" font-size="10">21 ~ 60</text>
+
+    <!-- Expensive / 昂贵 -->
+    <rect x="248" y="0" width="116" height="36" rx="4" fill="url(#cardBg)" stroke="#3d1b54" stroke-width="1"/>
+    <text x="306" y="17" text-anchor="middle" class="price-band expensive">偏高 90</text>
+    <text x="306" y="30" text-anchor="middle" class="price-band expensive" font-size="10">61 ~ 120</text>
+
+    <!-- Overpriced / 天价 -->
+    <rect x="372" y="0" width="120" height="36" rx="4" fill="url(#cardBg)" stroke="#3d1b54" stroke-width="1"/>
+    <text x="432" y="17" text-anchor="middle" class="price-band overpriced">天价 150</text>
+    <text x="432" y="30" text-anchor="middle" class="price-band overpriced" font-size="10">121 ~ 180</text>
+  </g>
+
+  <!-- Row 2: Centered Element Icons & Level Badges -->
+  <g transform="translate(130, 115)">
+    <!-- Element 1: Instrumentum / 工具 -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="80" height="74" rx="6" fill="url(#cardBg)" stroke="#4040EE" stroke-width="1.5"/>
+      <!-- Icon representation: Pickaxe/Tool silhouette in #4040EE -->
+      <circle cx="40" cy="30" r="18" fill="#4040EE" fill-opacity="0.2"/>
+      <path d="M30 38 L46 22 M34 18 L48 32 M30 18 L36 14 L42 20 L38 26 Z" stroke="#4040EE" stroke-width="2.5" fill="#4040EE" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="40" y="62" text-anchor="middle" class="element-name">工具</text>
+      <!-- Level Badge -->
+      <circle cx="68" cy="62" r="10" class="badge-bg"/>
+      <text x="68" y="66" text-anchor="middle" class="element-level">2</text>
+    </g>
+
+    <!-- Element 2: Metallum / 金属 -->
+    <g transform="translate(100, 0)">
+      <rect x="0" y="0" width="80" height="74" rx="6" fill="url(#cardBg)" stroke="#64647C" stroke-width="1.5"/>
+      <!-- Icon representation: Metal Ingot silhouette in #64647C -->
+      <circle cx="40" cy="30" r="18" fill="#64647C" fill-opacity="0.2"/>
+      <path d="M28 35 L34 22 L48 22 L52 35 Z" fill="#9999AA" stroke="#64647C" stroke-width="1.5"/>
+      <text x="40" y="62" text-anchor="middle" class="element-name">金属</text>
+      <!-- Level Badge -->
+      <circle cx="68" cy="62" r="10" class="badge-bg"/>
+      <text x="68" y="66" text-anchor="middle" class="element-level">2</text>
+    </g>
+
+    <!-- Element 3: Terra / 大地 -->
+    <g transform="translate(200, 0)">
+      <rect x="0" y="0" width="80" height="74" rx="6" fill="url(#cardBg)" stroke="#56C000" stroke-width="1.5"/>
+      <!-- Icon representation: Earth/Soil silhouette in #56C000 -->
+      <circle cx="40" cy="30" r="18" fill="#56C000" fill-opacity="0.2"/>
+      <polygon points="40,18 52,36 28,36" fill="#56C000" fill-opacity="0.8"/>
+      <text x="40" y="62" text-anchor="middle" class="element-name">大地</text>
+      <!-- Level Badge -->
+      <circle cx="68" cy="62" r="10" class="badge-bg"/>
+      <text x="68" y="66" text-anchor="middle" class="element-level">1</text>
+    </g>
+  </g>
+</svg>

@@ -60,6 +60,10 @@ public final class AlchemistContinuePurchase extends ElementContinuePurchaseAlgo
 
 If `continuePurchase` is omitted, the variant uses default purchase caps. Algorithms must remain side-effect-free.
 
+## Model and Animation Requirements
+
+Custom customer models require both `idle` and `walk` looping animations in their GeckoLib animation files. The `walk` animation should provide active rotation keyframes for leg bones (such as `r_rightLeg` and `l_leftLeg`) across walking cycles rather than static placeholder vectors to ensure natural movement presentation.
+
 ## Tint Color Variants
 
 `CustomerModelVariant` supports an optional color `tint`. Multiple variants can share identical geometry, textures, and animations while displaying distinct clothing colors.

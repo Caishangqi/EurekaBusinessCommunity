@@ -10,21 +10,18 @@
 * [48 Elements & Item Lore](players/Elements-System.md)
 * [Customer Behaviors & AI](players/Customer-Behaviors.md)
 
-## Pack Makers
+## Items & Blocks
 
-* [Configuration & Schema Migration](pack-makers/Configuration-Guide.md)
-* [Value Catalog & Item Economics](pack-makers/Catalog-and-Economics.md)
-* [Pack Integration & Debugging](pack-makers/Pack-Integration.md)
+* [Items & Blocks Overview](items/README.md)
+* [Shop Management & Keys](items/Shop-Management-Blocks.md)
+* [Cash Register & Checkout](items/Cash-Register-and-Checkout.md)
+* [Display Pedestals & Price Tags](items/Pedestals-and-Price-Tags.md)
+* [Container Labels & Configurator](items/Labels-and-Configurator.md)
+* [Value Containers & Profit](items/Value-Containers.md)
+* [Shop Decorations](items/Decorations.md)
 
 ## Addon Developers
 
 * [Addon API Overview](addon-developers/Addon-API-Overview.md)
 * [Custom Elements & Registration](addon-developers/Custom-Elements.md)
 * [Customer Variants & AI Algorithms](addon-developers/Customer-Variants-and-AI.md)
-
-## Module Reference
-
-* [Architecture & Design Contracts](modules/Architecture-Contracts.md)
-* [Core Module Contracts](modules/Core-Module.md)
-* [Retail Module Contracts](modules/Retail-Module.md)
-* [Restaurant Module Boundaries](modules/Restaurant-Module.md)

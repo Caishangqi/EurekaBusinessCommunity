@@ -1,63 +1,32 @@
 # EurekaBusiness Documentation
 
-Welcome to the official **EurekaBusiness** documentation. GitHub is the primary source repository, published through GitBook.
+![Shop Overview](../assets/shop_overview.png)
 
-EurekaBusiness is a cooperative simulation and shop management mod for Minecraft 1.21.1 / NeoForge. This wiki provides comprehensive guides, configuration manuals, and API references for players, modpack creators, and addon developers.
+Welcome to the official **EurekaBusiness** documentation. EurekaBusiness is a multiplayer-ready shop management and retail simulation mod for Minecraft 1.21.1 / NeoForge.
 
----
-
-## Quick Navigation
-
-```mermaid
-flowchart TD
-    Wiki[EurekaBusiness Wiki] --> Player[Player Guide]
-    Wiki --> Pack[Pack Maker Guide]
-    Wiki --> Addon[Addon Development]
-
-    Player --> P1[Core Gameplay & Setup]
-    Player --> P2[Display, Pricing & Decor]
-    Player --> P3[48 Elements & Lore]
-    Player --> P4[Customer AI & Queues]
-
-    Pack --> K1[Config & Migration]
-    Pack --> K2[Value Catalog & Economics]
-    Pack --> K3[Integration & Debugging]
-
-    Addon --> A1[Core / Retail Contracts]
-    Addon --> A2[Custom Elements]
-    Addon --> A3[Customer Variants & AI]
-```
-
-### 1. Player Guide
-- [Core Gameplay & Shop Setup](players/Gameplay-Guide.md)
-- [Display Pedestals, Pricing & Settlement](players/Shop-Management.md)
-- [Shop Decorations & Area Buffs](players/Decoration-Guide.md)
-- [48 Elements & Item Lore System](players/Elements-System.md)
-- [Customer Behaviors, Variants & Cashier Queuing](players/Customer-Behaviors.md)
-
-### 2. Modpack Creator Guide
-- [Configuration & Schema Migration Guide](pack-makers/Configuration-Guide.md)
-- [Item Value Catalog & Element Economics](pack-makers/Catalog-and-Economics.md)
-- [Modpack Integration & Developer Tools](pack-makers/Pack-Integration.md)
-
-### 3. Addon Developer Guide
-- [Module Architecture & Boundaries](modules/Architecture-Contracts.md)
-- [Core Module API Overview](modules/Core-Module.md)
-- [Retail Module Extension Points](modules/Retail-Module.md)
-- [Restaurant Module Boundaries](modules/Restaurant-Module.md)
-- [Addon API Overview](addon-developers/Addon-API-Overview.md)
-- [Custom Elements & Registry Contracts](addon-developers/Custom-Elements.md)
-- [Customer Variants & AI Algorithms](addon-developers/Customer-Variants-and-AI.md)
+This documentation serves players, shop owners, modpack creators, and addon developers with comprehensive guides, item and block references, configuration details, and development APIs.
 
 ---
 
-## Mod Version & Baseline
+## Who is this documentation for?
 
-| Attribute | Specification |
-| --- | --- |
-| **Game Version** | Minecraft Java Edition `1.21.1` |
-| **Mod Loader** | NeoForge `21.1.x` (`21.1.238`+ recommended) |
-| **Java Version** | Java 21 |
+This site is structured to provide clear and accurate information for different users:
+
+* **Players & Shopkeepers**: Learn how to zone shops from scratch, display goods, attract customer NPCs, process transactions, and decorate your store.
+* **Modpack Creators**: Inspect configuration options directly under each relevant feature section to customize items, catalog entries, element economics, and balance settings.
+* **Addon Developers**: Explore Core and Retail APIs, register custom elements, declare customer variants, and implement custom AI algorithms.
+
+> [!NOTE]
+> EurekaBusiness follows a **server-authoritative architecture**. Shop states, pricing evaluations, basket reservations, transactions, and persistent state remain strictly verified by the server. The client handles input and rendering only.
+
+---
+
+## Technical Baseline & Requirements
+
+| Specification | Target Baseline |
+| :--- | :--- |
+| **Minecraft Version** | Java Edition `1.21.1` |
+| **Mod Loader** | NeoForge `21.1.x` (Recommended `21.1.238`+) |
+| **Java Toolchain** | Java 21 |
 | **Required Dependencies** | `Fzzy Config` (`0.7.6+1.21+neoforge`), `Kotlin for Forge` (`5.4.0`) |
-| **Audiences** | Players, Modpack Creators, Addon Developers |
-| **Network Model** | Server authoritative. The client handles only rendering and user interactions. |
+| **Modular Structure** | Core platform foundations and Retail gameplay content |

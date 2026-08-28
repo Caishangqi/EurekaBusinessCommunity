@@ -60,6 +60,10 @@ public final class AlchemistContinuePurchase extends ElementContinuePurchaseAlgo
 
 未显式设置 `continuePurchase` 时，变体保留默认的连购意愿。算法不可修改库存或实体状态。
 
+## 模型与动画要求
+
+自定义顾客变体使用的 GeckoLib 动画文件需要同时声明 `idle` 与 `walk` 循环动画。`walk` 动画需要包含真实的腿部骨骼（如 `r_rightLeg` 与 `l_leftLeg`）前后摆动旋转关键帧，避免使用单一静态向量或占位符，以保证 NPC 在世界中行走时具有自然的步态表现。
+
 ## 颜色 Tint 模型变体
 
 `CustomerModelVariant` 可以声明可选的整体 `tint`。多个变体可以复用同一几何模型、纹理和动画，仅通过不同颜色代码提供视觉区分。Tint 仅作用于客户端渲染。

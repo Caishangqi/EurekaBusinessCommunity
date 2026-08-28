@@ -17,18 +17,11 @@ In EurekaBusiness, items carry unique **Element** attributes alongside prices, e
 
 ## 2. Item Tooltip & Lore Layout
 
+![Item Tooltip Value and Element Overlay](../../assets/item_tooltip_value_overlay.png)
+
 When hovering over an item with recognized value, the lore box displays:
 
-```
-┌──────────────────────────────────────────────┐
-│  Iron Pickaxe                                │
-├──────────────────────────────────────────────┤
-│  [Underpriced] [Fair] [Overpriced] [Refusal] │
-│                                              │
-│          [ ⛏ 2 ]   [ ⚙ 1 ]   [ ⚒ 1 ]         │
-│          (Centered element icons + level)    │
-└──────────────────────────────────────────────┘
-```
+![Item Tooltip Structure Diagram](../../assets/item_tooltip_structure_en.svg)
 
 - **Top Row**: Four-tier price reaction bands (Underpriced, Fair, Overpriced, Refusal).
 - **Bottom Row**: **Centered** row of element icons.

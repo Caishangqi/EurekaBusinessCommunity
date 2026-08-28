@@ -10,15 +10,15 @@ The **Display Pedestal** is the primary merchandise selling block in the Retail 
 - **Dynamic Capacity**: Inventory capacity matches the natural maximum stack size of the deposited item (e.g. 16 for ender pearls, 64 for iron ingots), avoiding arbitrary fixed limits.
 - **Visual Display**: Items are rendered above the pedestal using a custom Block Entity Renderer (BER) with rotation and hologram projection support.
 - **Interaction**:
-  - **Right-Click**: Deposit or retrieve held items.
-  - **Sneak-Right-Click**: Open the pedestal configuration screen or install augment modules.
+  - **Right-Click**: Deposit or retrieve held items, or open the main pedestal sales interface when not pointing at the side augment panel.
+  - **Right-Click Side Panel**: Aim at the center augment panel on any of the four horizontal faces (North, South, East, West) and right-click to open the pedestal plugin configuration screen with 8 plugin slots.
 
 ---
 
 ## 2. Pricing & Price Tag Modules
 
 Pedestals do not publish prices to customers by default. Pricing requires an augment module:
-1. **Install Price Tag**: Insert a **Price Tag Module** into an augment slot on the pedestal.
+1. **Install Price Tag**: Insert a **Price Tag Module** into one of the 8 plugin slots in the pedestal plugin interface.
 2. **Adjust Price**:
    - The current public price hovers above the tag.
    - Use the **Value Box** interface or right-click the tag to increment or decrement the price.

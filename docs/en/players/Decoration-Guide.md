@@ -25,9 +25,11 @@ Placing decorations within the shop boundary provides operational bonuses to cov
    - Example: An enchanted book with **Magic Lv.3** placed on a pedestal covered by both the Gecho Gargoyle and Resounding Horn receives:
      $$\text{Total Price Bonus} = 20\% + (3 \times 5\%) = +35\%$$
      If the base price is 40 value, final checkout revenue is $\lfloor 40 \times 1.35 \rfloor = 54$ value.
-3. **Layout Strategies**:
+3. **Layout Strategies & Persistence**:
    - Place Gecho Gargoyles near the shop center to radiate standard retail shelves.
    - Point Resounding Horns directly at dedicated high-tier arcane and magical displays to maximize returns.
+   - Valid decorations placed in the shop automatically persist with the shop state. Buffs are restored on world load without needing to replace the blocks.
+   - When a pedestal has no active decoration bonus or contains no item, the buff total displays as `-`. Active positive bonuses display as `+X%`.
 
 ---
 

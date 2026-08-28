@@ -31,7 +31,11 @@ Hold the **Shop Configurator**:
 3. **Set Entrance & Exit**:
    - Switch to `Set Entrance` mode and right-click ground blocks where customers should enter.
    - Switch to `Set Exit` mode and right-click ground blocks where customers should leave.
-   - Note: Multiple entrances and exits are supported. Customers choose the shortest accessible route.
+> [!TIP]
+> Multiple entrances and exits are supported. Customers choose optimal routes based on congestion and path distance.
+
+> [!CAUTION]
+> Spatial configuration (modifying bounds, entrances, exits, or queue zones) is blocked while the shop is open or when customers are still leaving. Close the shop and wait for all customers to leave before reconfiguring spaces.
 
 ---
 

@@ -32,6 +32,8 @@ Customers belong to distinct occupational variants with unique models, textures,
 
 ## 3. Shop Element Profiles & Rarity Sampling
 
+![Customer Browsing Pedestal and Reaction](../../assets/customer_browsing_reaction.png)
+
 - **Shop Element Profile**:
   - Upon customer spawn ticks, the server computes a snapshot of all active pedestal contents, recording distinct elements, maximum levels, and cumulative element sums ($\sum \text{Element}$).
   - Example: A shop exhibiting an Enchanted Book (`praecantatio` Lv.3), Ghast Tear (`praecantatio` Lv.2), and Blaze Rod (`potentia` Lv.2) yields `praecantatio_sum=5` and `potentia_sum=2`.
@@ -57,3 +59,5 @@ flowchart TD
   - Following each successful purchase, the variant algorithm computes the continuous purchase chance based on item elements and shop atmosphere.
   - **Satisfaction Bonus**: Underpriced bargains or preferred elements substantially increase the chance to continue shopping.
   - **Basket Caps**: Hard limits ensure customers proceed to the cash register once their purchase target is satisfied.
+
+![Multiple Customers Queuing in Front of Cash Register](../../assets/customer_queue.png)
