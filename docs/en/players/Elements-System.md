@@ -11,7 +11,7 @@ In EurekaBusiness, items carry unique **Element** attributes alongside prices, e
 - **Key Functions**:
   1. **Customer Spawning & Preferences**: Diverse customer variants (such as Alchemists, Mages, Miners, Explorers) show strong affinity for specific elements.
   2. **Continuous Purchases**: Buying high-level items matching their preferred elements boosts continuous purchase probability.
-  3. **Valuation & Pricing**: Pack authors can configure default fair prices based on elemental compositions.
+  3. **Valuation & Pricing**: Default fair prices can be configured in the value catalog based on elemental compositions.
 
 ---
 

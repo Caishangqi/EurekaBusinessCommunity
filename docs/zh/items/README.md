@@ -11,5 +11,6 @@
 * [价值容器与收益存储](Value-Containers.md)：价值容器 (`value_container`) 与 5 阶升级合成规则。
 * [店铺装饰品](Decorations.md)：石像鬼雕像 (`gecho_gargoyle`) 与回响之号角 (`resounding_horn`)。
 
-> [!TIP]
-> 每一个物品与方块的详细属性、使用方式、合成方式以及可配置参数均在各自页面中完整列出。
+{% hint style="info" %}
+每一个物品与方块的详细属性、使用方式、合成方式以及可配置参数均在各自页面中完整列出。
+{% endhint %}

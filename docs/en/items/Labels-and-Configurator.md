@@ -58,5 +58,6 @@ When customers abandon their shopping journey (due to store closure, insufficien
 * **Max Stack Size**: 64
 * **Description**: Designates containers as **Customer Tip Jars**, allowing delighted customers to leave bonus compensation upon departure.
 
-> [!TIP]
-> Labels can be attached to vanilla chests, barrels, and most modded storage blocks.
+{% hint style="info" %}
+Labels can be attached to vanilla chests, barrels, and most modded storage blocks.
+{% endhint %}

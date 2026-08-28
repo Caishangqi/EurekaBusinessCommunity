@@ -11,5 +11,6 @@ This section catalogs all core registered items and blocks in **EurekaBusiness**
 * [Value Containers & Profit](Value-Containers.md): Value Container (`value_container`) and the 5-tier upgrade progression.
 * [Shop Decorations](Decorations.md): Gecho Gargoyle (`gecho_gargoyle`) and Resounding Horn (`resounding_horn`).
 
-> [!TIP]
-> Each item or block page includes detailed descriptions, interaction mechanics, recipes, and pack-maker configuration options.
+{% hint style="info" %}
+Each item or block page includes detailed descriptions, interaction mechanics, recipes, and configuration options.
+{% endhint %}

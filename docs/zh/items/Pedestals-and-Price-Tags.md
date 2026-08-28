@@ -62,9 +62,9 @@ flowchart TD
 
 ---
 
-## 整合包作者配置参考 (Pack Maker Reference)
+## 商品价值与要素配置 (Value Catalog Configuration)
 
-商品目录与参考价值由 Fzzy Config 配置文件 `config/eurekabusinessretail.toml` (`eurekabusinessretail:value_catalog`) 驱动：
+商品目录与参考价值由 Fzzy Config 配置文件 `config/eurekabusinessretail.toml` (`eurekabusinessretail:value_catalog`) 驱动，可以通过修改此配置文件自定义商品价格区间与要素属性：
 
 ```toml
 [[catalogEntries]]
@@ -79,5 +79,6 @@ elementId = "eurekabusinesscore:element_vitreus"
 level = 3
 ```
 
-> [!NOTE]
-> 整合包作者可在此自由添加模组物品的四档区间和对应要素属性，客户端将自动同步服务端的最新商品目录。
+{% hint style="info" %}
+可通过修改此配置文件为任意原版或其它模组物品配置四档区间和对应要素属性，客户端将自动同步服务端的最新商品目录。
+{% endhint %}

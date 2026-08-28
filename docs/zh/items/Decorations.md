@@ -24,8 +24,9 @@ flowchart TD
 * **物品注册名**：`eurekabusinessretail:gecho_gargoyle`
 * **加成机制**：以自身为中心的 $2 \times 1 \times 2$ 空间范围内，所有陈列基座上的商品基础售价 **+20%**。
 
-> [!TIP]
-> 将石像鬼雕像摆放在店铺货架中央，可以最大化辐射多个常规商品陈列区。
+{% hint style="info" %}
+将石像鬼雕像摆放在店铺货架中央，可以最大化辐射多个常规商品陈列区。
+{% endhint %}
 
 ---
 
@@ -35,8 +36,9 @@ flowchart TD
 * **物品注册名**：`eurekabusinessretail:resounding_horn`
 * **加成机制**：朝向正前方 $2 \times 1 \times 2$ 空间范围内，所有带有 **魔法要素 (`praecantatio`)** 的商品，每拥有 1 级魔法要素，最终售价额外 **+5%**。
 
-> [!TIP]
-> 将回响之号角正对高阶附魔书、恶魂之泪或法杖陈列柜，可形成极高倍率的魔法专柜加成。
+{% hint style="info" %}
+将回响之号角正对高阶附魔书、恶魂之泪或法杖陈列柜，可形成极高倍率的魔法专柜加成。
+{% endhint %}
 
 ---
 

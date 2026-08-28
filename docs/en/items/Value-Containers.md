@@ -40,5 +40,6 @@ flowchart LR
 2. **Value Consumption**: The upgraded container resets its balance to zero, while its capacity expands by 4x.
 3. **Glint Feedback**: Full containers exhibit an enchantment glint in inventories to signal upgrade readiness.
 
-> [!NOTE]
-> Placed value containers emit dynamic block light (levels 0 to 8) proportional to their filled capacity. Breaking the block preserves all tier and balance data.
+{% hint style="info" %}
+Placed value containers emit dynamic block light (levels 0 to 8) proportional to their filled capacity. Breaking the block preserves all tier and balance data.
+{% endhint %}

@@ -30,11 +30,13 @@ flowchart LR
    - Switch to `Set Entrance` / `Set Exit` mode and right-click floor blocks to mark customer spawn and departure points.
    - Switch to `Set Queue Area` mode and right-click ground blocks in front of cash registers to configure waiting lines.
 
-> [!CAUTION]
-> The Shop Configurator locks spatial modifications while the shop is open or while customers remain inside. Retrieve the key from the Key Device to drain existing shoppers before reconfiguring boundaries.
+{% hint style="warning" %}
+The Shop Configurator locks spatial modifications while the shop is open or while customers remain inside. Retrieve the key from the Key Device to drain existing shoppers before reconfiguring boundaries.
+{% endhint %}
 
-> [!TIP]
-> Multiple entrances and exits are fully supported. Customers dynamically calculate congestion weights and path lengths to select optimal doors.
+{% hint style="info" %}
+Multiple entrances and exits are fully supported. Customers dynamically calculate congestion weights and path lengths to select optimal doors.
+{% endhint %}
 
 ---
 
@@ -71,5 +73,6 @@ flowchart LR
   * **Retrieve Key**: Empty-hand normal right-click the device to retrieve the key and trigger shop closure.
 * **Unbinding**: Place a bound Shop Key into any crafting grid by itself to clear all metadata.
 
-> [!NOTE]
-> The key carries a cryptographic credential snapshot. Every operation is re-verified authoritatively on the server.
+{% hint style="info" %}
+The key carries a cryptographic credential snapshot. Every operation is re-verified authoritatively on the server.
+{% endhint %}

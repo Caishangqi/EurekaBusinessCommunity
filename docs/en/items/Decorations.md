@@ -24,8 +24,9 @@ flowchart TD
 * **Item Registry Name**: `eurekabusinessretail:gecho_gargoyle`
 * **Buff Effect**: Increases the base selling price of goods on all pedestals within its centered $2 \times 1 \times 2$ bounding box by **+20%**.
 
-> [!TIP]
-> Position the gargoyle in the center of your general sales racks to maximize pedestal coverage.
+{% hint style="info" %}
+Position the gargoyle in the center of your general sales racks to maximize pedestal coverage.
+{% endhint %}
 
 ---
 
@@ -35,8 +36,9 @@ flowchart TD
 * **Item Registry Name**: `eurekabusinessretail:resounding_horn`
 * **Buff Effect**: Boosts items with the **Magic Element (`praecantatio`)** by **+5% per element level** across its forward $2 \times 1 \times 2$ zone.
 
-> [!TIP]
-> Align the horn directly facing high-tier enchanted books or alchemy displays to create premium magic display cases.
+{% hint style="info" %}
+Align the horn directly facing high-tier enchanted books or alchemy displays to create premium magic display cases.
+{% endhint %}
 
 ---
 

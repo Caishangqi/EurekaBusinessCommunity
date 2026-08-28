@@ -62,9 +62,9 @@ flowchart TD
 
 ---
 
-## Pack Maker Configuration Reference
+## Value Catalog & Element Configuration
 
-Item pricing tables are configured via Fzzy Config (`config/eurekabusinessretail.toml` under `eurekabusinessretail:value_catalog`):
+Item pricing and element properties are driven by the Fzzy Config file `config/eurekabusinessretail.toml` (under `eurekabusinessretail:value_catalog`). You can customize price bands and element aspects directly via this configuration:
 
 ```toml
 [[catalogEntries]]
@@ -79,5 +79,6 @@ elementId = "eurekabusinesscore:element_vitreus"
 level = 3
 ```
 
-> [!NOTE]
-> Modpack creators can freely add entries for custom modded items with element properties. Clients automatically synchronize valid server-side catalogs.
+{% hint style="info" %}
+You can add custom entries for any vanilla or modded items with custom price bands and element aspects. Connected clients automatically synchronize the latest server-side catalog.
+{% endhint %}

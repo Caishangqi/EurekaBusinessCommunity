@@ -48,5 +48,6 @@ flowchart TD
   * Customer plays success feedback and departs toward an exit;
   * Transaction records are committed server-side.
 
-> [!TIP]
-> Pulling the Cashier Handle and clicking the settle button in the register GUI invoke the same server-side atomic settlement transaction.
+{% hint style="info" %}
+Pulling the Cashier Handle and clicking the settle button in the register GUI invoke the same server-side atomic settlement transaction.
+{% endhint %}
