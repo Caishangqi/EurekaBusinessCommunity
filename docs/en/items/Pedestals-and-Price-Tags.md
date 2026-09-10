@@ -64,7 +64,7 @@ flowchart TD
 
 ## Value Catalog & Element Configuration
 
-Item pricing and element properties are driven by the Fzzy Config file `config/eurekabusinessretail.toml` (under `eurekabusinessretail:value_catalog`). You can customize price bands and element aspects directly via this configuration:
+Item pricing and element properties are driven by the Fzzy Config file `config/eurekabusinessretail/value_catalog.toml`. You can customize price bands and element aspects directly through this configuration:
 
 ```toml
 [[catalogEntries]]
@@ -82,3 +82,7 @@ level = 3
 {% hint style="info" %}
 You can add custom entries for any vanilla or modded items with custom price bands and element aspects. Connected clients automatically synchronize the latest server-side catalog.
 {% endhint %}
+
+## KubeJS server overlay
+
+Fzzy Config remains the base source for catalog and element settings. With the optional Retail KubeJS adapter installed, a server can add or replace catalog content through declarative scripts after Fzzy Config. Script overlays update after `/reload`. Structural KubeJS content still requires a restart. Read [Retail KubeJS Integration](../addon-developers/KubeJS-Integration.md) for installation and API details.

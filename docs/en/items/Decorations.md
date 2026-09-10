@@ -46,3 +46,7 @@ Align the horn directly facing high-tier enchanted books or alchemy displays to 
 
 * **Linear Stacking**: Buffs from multiple unique decoration types stack linearly on covered pedestals.
 * **Persistent Recovery**: Decoration positions and spatial bounds restore automatically across world reloads and server restarts.
+
+## Server defined decorations
+
+With the optional Retail KubeJS adapter, a server can declare registered vanilla, mod, or normal KubeJS blocks as shop decorations. A declared block blocks Retail customer pathfinding inside the shop, so do not declare a customer corridor block as a decoration. Read [Retail KubeJS Integration](../addon-developers/KubeJS-Integration.md) for scripts, restart requirements, and examples.

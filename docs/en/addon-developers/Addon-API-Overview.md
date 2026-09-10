@@ -22,6 +22,10 @@ This document provides development guidelines for NeoForge addon authors extendi
 
 Retail catalogs, pedestal logic, and trading rules are encapsulated in `Retail`. Addons should interact through public Retail contracts rather than mutating `ValueCatalogSnapshot` or customer entity fields directly.
 
+### Optional KubeJS adapter
+
+Install the optional Retail KubeJS adapter when a server needs scripts for catalog entries, customer policies, tips, or decorations. It provides a bounded declarative interface. It does not replace the Java addon API or let scripts control transactions or customer behavior directly. Read [Retail KubeJS Integration](KubeJS-Integration.md) for installation, lifecycle, and script limits.
+
 ## Server Authority Principles
 
 All client requests must be validated on the server. Never trust client-supplied item stacks, price amounts, element levels, or target block positions.

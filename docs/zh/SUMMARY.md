@@ -23,5 +23,6 @@
 ## 模组附属开发
 
 * [附属 API 概览](addon-developers/Addon-API-Overview.md)
+* [Retail KubeJS 集成](addon-developers/KubeJS-Integration.md)
 * [自定义要素与注册契约](addon-developers/Custom-Elements.md)
 * [顾客变体与 AI 算法开发](addon-developers/Customer-Variants-and-AI.md)

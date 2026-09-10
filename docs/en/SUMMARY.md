@@ -23,5 +23,6 @@
 ## Addon Developers
 
 * [Addon API Overview](addon-developers/Addon-API-Overview.md)
+* [Retail KubeJS Integration](addon-developers/KubeJS-Integration.md)
 * [Custom Elements & Registration](addon-developers/Custom-Elements.md)
 * [Customer Variants & AI Algorithms](addon-developers/Customer-Variants-and-AI.md)

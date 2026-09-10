@@ -64,7 +64,7 @@ flowchart TD
 
 ## 商品价值与要素配置 (Value Catalog Configuration)
 
-商品目录与参考价值由 Fzzy Config 配置文件 `config/eurekabusinessretail.toml` (`eurekabusinessretail:value_catalog`) 驱动，可以通过修改此配置文件自定义商品价格区间与要素属性：
+商品目录与参考价值由 Fzzy Config 配置文件 `config/eurekabusinessretail/value_catalog.toml` 驱动，可以通过修改此配置文件自定义商品价格区间与要素属性：
 
 ```toml
 [[catalogEntries]]
@@ -82,3 +82,7 @@ level = 3
 {% hint style="info" %}
 可通过修改此配置文件为任意原版或其它模组物品配置四档区间和对应要素属性，客户端将自动同步服务端的最新商品目录。
 {% endhint %}
+
+## KubeJS 服务器覆层
+
+Fzzy Config 仍是商品目录和要素配置的基础来源。安装可选 Retail KubeJS 适配器后，服务器可在 Fzzy Config 之上通过声明式脚本追加或替换目录内容。脚本配置在 `/reload` 后更新，结构性 KubeJS 内容仍需要重启。安装和 API 说明见 [Retail KubeJS 集成](../addon-developers/KubeJS-Integration.md)。
